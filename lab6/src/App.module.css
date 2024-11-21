@@ -1,0 +1,107 @@
+/* Основний контейнер програми */
+.app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Головна секція */
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Центрування контенту */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль кнопок */
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Додаткова стилізація для модального вікна */
+.modal-transition-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.modal-transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-transition-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-transition-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Debug вікно */
+.debug-window {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 8px 8px 0 0;
+  max-width: 300px;
+  overflow-y: auto;
+  max-height: 150px;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок debug */
+.debug-window h3 {
+  margin: 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Список історії */
+.debug-window ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.debug-window li {
+  margin: 5px 0;
+}

@@ -1,0 +1,23 @@
+.debugContainer {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.historyList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.historyItem {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.noHistory {
+  font-style: italic;
+  color: #999;
+}
